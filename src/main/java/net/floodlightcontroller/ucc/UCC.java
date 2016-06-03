@@ -160,8 +160,9 @@ public class UCC implements IOFMessageListener, IFloodlightModule {
                 	//int n = Integer.parseInt(serialized.toString().substring(3), 2);
                 	//System.out.println(Integer.toBinaryString(n));
                 	Ucc ucc = new Ucc();
-                	ucc.setParent(ipv6);
-                	ucc = (Ucc) ucc.deserialize(serialized,1,40);
+
+                	//ucc.setParent(ipv6);
+                	ucc = (Ucc) ucc.deserialize(serialized,3,ipv6.getPayloadLength());
                 	logger.info(" \n\n\n UCC: {} \n\n\n", ucc.toString());
                 	
                 	} catch (Exception ex) {
