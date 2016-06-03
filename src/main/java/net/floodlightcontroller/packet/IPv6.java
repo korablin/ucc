@@ -36,6 +36,9 @@ public class IPv6 extends BasePacket {
 		// TODO: Add ICMPv6, IPv6 Options, etc..
 		nextHeaderClassMap.put(IpProtocol.TCP, TCP.class);
 		nextHeaderClassMap.put(IpProtocol.UDP, UDP.class);
+		//nextHeaderClassMap.put(IpProtocol.IPv6, Ucc.class);
+		//nextHeaderClassMap.put(IpProtocol.IPv6_ICMP, TCP.class);
+		//nextHeaderClassMap.put(IpProtocol.IPv6_ICMP, Ucc.class);
 	}
 
 	public static final int HEADER_LENGTH = 40;
